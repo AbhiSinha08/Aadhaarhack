@@ -52,7 +52,7 @@ class Address():
         elif self.city.upper() in self.house.upper():
             self.house = self.house.lower().replace(" "+self.city.lower(), "")
 
-        if self.landmark:
+        if len(self.landmark) >= 3:
             temp = self.landmark.upper().split()[0]
             if "NEAR" != temp and "OPP" != temp[:3]:
                 self.landmark = f"Near: {self.landmark}"
@@ -65,8 +65,11 @@ class Address():
             self.po = self.po.lower().replace(" "+self.sDistrict.lower(), "")
         elif self.state.upper() in self.po.upper():
             self.po = self.po.lower().replace(" "+self.state.lower(), "")
-        if self.po[-1] == ",":
-            self.po = self.po[:-1]
+        try:
+            if self.po[-1] == ",":
+                self.po = self.po[:-1]
+        except:
+            pass
 
         if self.street.upper() in self.area.upper():
             self.street = ""  
