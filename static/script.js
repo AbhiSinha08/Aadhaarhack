@@ -3,8 +3,9 @@ const form = document.getElementById('form');
 const aadhar = document.getElementById('aadhar');
 
 btn.onclick = function() {
-    aadhar.classList.remove('inactive-class');
-    getapi('/api')
+    aadhar.classList.remove('hidden');
+    aadhar.classList.add('flex');
+    getapi('/api');
 }
 
 async function getapi(url) {

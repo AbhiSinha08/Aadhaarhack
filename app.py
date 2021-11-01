@@ -20,5 +20,5 @@ def index():
         return "Put index.html in the templates directory of repo"
 
 if __name__ == '__main__':
-    app.debug = True
+    # app.debug = True
     app.run()
