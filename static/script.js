@@ -47,7 +47,7 @@ async function getapi(url) {
     if (data['Name']){display.innerHTML += data['Name'] + "<br>";}
     if (data['C/o']){display.innerHTML += "C/o: " + data['C/o'] + "<br>";}
     if (data['House no.']){display.innerHTML += data['House no.'];}
-    if (data['House no'] && data['Street']){display.innerHTML += ", ";}
+    if (data['House no.'] && data['Street']){display.innerHTML += ", ";}
     if (data['Street']){display.innerHTML += data['Street'];}
     if (data['Street'] && data['Area']){display.innerHTML += ", ";}
     if (data['PO'] && data['Area'] && !data['Street']){display.innerHTML += ", ";}
